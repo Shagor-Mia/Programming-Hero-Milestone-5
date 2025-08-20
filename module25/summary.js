@@ -9,3 +9,6 @@ function addName() {
   newName.appendChild(newP);
   inputName.value = "";
 }
+//
+
+document.getElementById("add2").addEventListener("click", function (e) {});
