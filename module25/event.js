@@ -70,9 +70,65 @@ input.addEventListener("focus", function userEnter() {
 input.addEventListener("blur", function userEnterOut() {
   console.log("user get out");
 });
+// for letter
 input.addEventListener("keydown", function keyDown(e) {
   console.log("key down", e);
 });
+// for word
 input.addEventListener("keyup", function keyUp(e) {
-  console.log("key up", e);
+  console.log("key up", e.target.value);
+});
+// delete
+const deleteU = document.getElementById("delete-input");
+deleteU.addEventListener("keyup", function deleteUser(e) {
+  const text = e.target.value;
+  const btnDelete = document.getElementById("delete-btn");
+  if (text === "delete") {
+    btnDelete.removeAttribute("disabled");
+    const secretIfo = document.getElementById("secret-info");
+    secretIfo.style.display = "none";
+  } else {
+    console.log("something else");
+  }
+});
+
+// 25-7 (semi-advanced) Event bubble and Stop propagating
+document.getElementById("item-2").addEventListener("click", function item2(e) {
+  console.log("item 2 clicked");
+  // e.stopPropagation();
+  e.stopImmediatePropagation();
+});
+//
+document.getElementById("ol-7").addEventListener("click", function item2() {
+  console.log("ol section clicked");
+});
+//
+document.getElementById("sec-7").addEventListener("click", function item2() {
+  console.log("div section clicked");
+});
+
+// 25-8 (advanced) Event delegate and benefit of Event bubble
+
+// const items = document.getElementsByClassName("item");
+
+// for (const item of items) {
+
+//   item.addEventListener("click", function (e) {
+//     e.target.parentNode.removeChild(e.target);
+//   });
+// }
+
+//remove item from parent
+document.getElementById("sec-8").addEventListener("click", function (e) {
+  e.target.parentNode.removeChild(e.target);
+});
+
+// add item ,
+document.getElementById("add-item").addEventListener("click", function add(e) {
+  const ol = document.getElementById("sec-8");
+
+  const li = document.createElement("li");
+  li.innerText = "new item";
+
+  ol.appendChild(li);
 });

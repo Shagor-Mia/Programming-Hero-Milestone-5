@@ -10,6 +10,16 @@
         border-radius: 10px;
         padding: 10px;
       }
+      #sec-7 {
+        border: 2px solid violet;
+      }
+      #ol-7 {
+        border: 2px solid sienna;
+      }
+      #ol-7 li {
+        border: 2px solid red;
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
@@ -58,7 +68,38 @@
       <button id="mouse">mouse</button>
       <input type="text" id="user-input" placeholder="enterName" />
     </section>
-
+    <!-- delete -->
+    <section>
+      <h1 id="secret-info">Secret Info</h1>
+      <input type="text" name="" id="delete-input" />
+      <button id="delete-btn" disabled>Delete</button>
+    </section>
+    <!-- 25-7 (semi-advanced) Event bubble and Stop propagating -->
+    <section>
+      <h1>event bubble</h1>
+      <div id="sec-7">
+        <h3>List of things</h3>
+        <ol id="ol-7">
+          <li id="item-1">Lorem, ipsum.</li>
+          <li id="item-2">Error, asperiores?</li>
+          <li id="item-3">Nesciunt, ab?</li>
+          <li id="item-4">Dolorum, unde.</li>
+          <li id="item-5">Cumque, dicta.</li>
+          <li id="item-6">Omnis, nobis?</li>
+        </ol>
+      </div>
+    </section>
+    <!-- 25-8 (advanced) Event delegate and benefit of Event bubble -->
+    <section>
+      <ol id="sec-8">
+        <li class="item">myItem-1</li>
+        <li class="item">myItem-2</li>
+        <li class="item">myItem-3</li>
+        <li class="item">myItem-4</li>
+        <li class="item">myItem-5</li>
+      </ol>
+      <button id="add-item">add item</button>
+    </section>
     <script src="event.js"></script>
   </body>
 </html>
