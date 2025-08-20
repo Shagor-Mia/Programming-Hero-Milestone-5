@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <style>
+      .comment {
+        border: 2px solid royalblue;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">DOM</h1>
+    <button onclick="console.log('hello')">click</button>
+    <button onclick="makeYellow()">yellow</button>
+    <button id="blue">blue</button>
+    <button id="green">green</button>
+    <!-- add eventListener -->
+    <button id="orange">orange</button>
+    <button id="btn-title">title</button>
+    <!--  -->
+    <p id="para">no name</p>
+    <input id="name" type="text" placeholder="enterName" />
+    <button id="update">update</button>
+    <!-- 25-5 Create a comment box and display comment -->
+
+    <section>
+      <h1>My Awesome Comment Box!</h1>
+      <h3>All Comments here</h3>
+      <div id="comment-container">
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          ipsum maxime odio consectetur ex! Ratione delectus velit temporibus
+          ipsum sit.
+        </p>
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          ipsum maxime odio consectetur ex! Ratione delectus velit temporibus
+          ipsum sit.
+        </p>
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          ipsum maxime odio consectetur ex! Ratione delectus velit temporibus
+          ipsum sit.
+        </p>
+      </div>
+      <form>
+        <textarea name="" id="text-area" cols="60" rows="5"></textarea><br />
+        <button id="post">Post Comment</button>
+      </form>
+    </section>
+    <br />
+    <!-- 25-6 Explore more event type and Simple github like delete confirmation button -->
+    <section>
+      <button id="mouse">mouse</button>
+      <input type="text" id="user-input" placeholder="enterName" />
+    </section>
+
+    <script src="event.js"></script>
+  </body>
+</html>
